@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 0.1,
+  "created": "2018-11-16",
+  "updated": "2018-11-16",
+  "works": [
+    {
+      "title": "art",
+      "artists": [
+        {
+          "name": "bob",
+          "nation": "united states"
+        },
+        {
+          "name": "polly",
+          "nation": "palau"
+        }
+      ],
+      "creation": "2017-01-01",
+      "acquisition": {
+        "date": "2018-01-01",
+        "place": "Maine auction",
+        "method": "purchased"
+      },
+      "media": [
+        "paint",
+        "glue",
+        "hot dogs"
+      ],
+      "note": "markdown"
+    },
+    {
+      "title": "Work title",
+      "artists": [
+        {
+          "name": "Artist Name",
+          "nation": "Artist nationality"
+        },
+        {
+          "name": "Artist Name",
+          "nation": "Artist nationality"
+        },
+        {
+          "name": "Artist Name",
+          "nation": "Artist nationality"
+        },
+        {
+          "name": "Name of group of artists",
+          "nation": "Artist nationality"
+        }
+      ],
+      "creation": "Year of creation/completion",
+      "acquisition": {
+        "date": "Year",
+        "place": "place",
+        "method": "verb"
+      },
+      "media": ["Medium/media list or note"],
+      "note": "Optional explanatory note, minimal use of jargon or pretentious language, no supposition of artist’s intent."
+    }
+  ]
+}
