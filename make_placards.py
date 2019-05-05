@@ -1,25 +1,39 @@
 #!/usr/bin/env python
 
 import argparse
-from codecs import open
-import jinja2
 import json
+from io import open
 
-parser = argparse.ArgumentParser(description='Generate printable placards based on JSON metadata.')
-parser.add_argument('file', metavar='FILE', type=file, help='the input file to read')
-parser.add_argument('-o', '--output', dest='outfile', default='placards_generated.html',
-                    help='optional output filename')
-parser.add_argument('-t', '--template', dest='template', default='placards_template.html',
-                    help='optional template filename')
+import jinja2
 
-args = parser.parse_args()
-
-works_wrapper = json.load(args.file)
-
-env = jinja2.Environment(
-    loader=jinja2.FileSystemLoader('.'),
-    autoescape=jinja2.select_autoescape(['html'])
+PARSER = argparse.ArgumentParser(
+    description="Generate printable placards based on JSON metadata."
 )
-template = env.get_template('placards_template.html')
-with open(args.outfile, 'w', encoding='utf-8') as result:
-    result.write(template.render(works=works_wrapper['works']))
+PARSER.add_argument("file", metavar="FILE", help="the input file to read")
+PARSER.add_argument(
+    "-o",
+    "--output",
+    dest="outfile",
+    default="placards_generated.html",
+    help="optional output filename",
+)
+PARSER.add_argument(
+    "-t",
+    "--template",
+    dest="template",
+    default="placards_template.html",
+    help="optional template filename",
+)
+
+ARGS = PARSER.parse_args()
+
+ENV = jinja2.Environment(
+    loader=jinja2.FileSystemLoader("."), autoescape=jinja2.select_autoescape(["html"])
+)
+TEMPLATE = ENV.get_template("placards_template.html")
+
+with open(ARGS.file) as file:
+    WORKS = json.load(file)["works"]
+
+    with open(ARGS.outfile, "w", encoding="utf-8") as result:
+        result.write(TEMPLATE.render(works=WORKS))

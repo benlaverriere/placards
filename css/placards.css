@@ -3,6 +3,7 @@
 /* TODO reduce to weights/styles I use */
 
 section {
+    box-sizing: border-box;
     border: 1px solid #DDD;
     margin: 0.25in 0;
     page-break-inside: avoid;

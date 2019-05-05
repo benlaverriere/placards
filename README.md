@@ -1,3 +1,3 @@
 # placards
 
-`pip install Jinja2`
+`pip[3] install Jinja2`
