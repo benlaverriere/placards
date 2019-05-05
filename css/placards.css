@@ -53,9 +53,19 @@ p.creation {
     font-weight: 300;
 }
 
-p.note {
+div.note p {
     font-weight: 400;
     letter-spacing: +0.01em;
+}
+
+div.note p:first-child {
+  margin-top: 0;
+}
+
+p.noteType {
+  font-weight: 700;
+  letter-spacing: +0.01em;
+  margin-bottom: 0;
 }
 
 p.acquisition {

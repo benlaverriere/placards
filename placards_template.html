@@ -22,7 +22,8 @@
             <h2>{{ work.title }}</h2>
             <p class="media">{{ work.media|join(', ') }}</p>
             <p class="creation">{{ work.creation }}</p>
-            <p class="note">{{ work.note }}</p>
+            <p class="noteType">{{ work.noteType }}</p>
+            <div class="note">{{ work.note|markdown|safe }}</div>
             <p class="acquisition">{{ work.acquisition.method|default('acquired')|capitalize -}}
             {%- if work.acquisition.place %} at {{ work.acquisition.place }}, {% endif -%}
             {{- work.acquisition.date }}</p>
