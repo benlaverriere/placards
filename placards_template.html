@@ -25,8 +25,8 @@
             <p class="noteType">{{ work.noteType }}</p>
             <div class="note">{{ work.note|markdown|safe }}</div>
             <p class="acquisition">{{ work.acquisition.method|default('acquired')|capitalize -}}
-            {%- if work.acquisition.place %} at {{ work.acquisition.place }}, {% endif -%}
-            {{- work.acquisition.date }}</p>
+            {%- if work.acquisition.place %} at {{ work.acquisition.place }},{% endif -%}
+            &nbsp;{{ work.acquisition.date }}</p>
         </section>
         {% endfor %}
     </body>
