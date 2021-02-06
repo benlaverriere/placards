@@ -1,5 +1,5 @@
 const csv = require('csvtojson');
-const json2html_original = require('node-json2html');
+const sqrl = require('squirrelly');
 const fs = require('fs');
 
 async function csv2json(inputCSV) {
@@ -7,8 +7,11 @@ async function csv2json(inputCSV) {
 }
 
 function json2html(inputJSON) {
-  let template = {'<>':'div','html':'${title} ${year}'};
-  return json2html_original.transform(inputJSON, template);
+  console.log(inputJSON);
+  const template = '{{@each(it) => value, index}}\
+    <div>{{value.title}} {{value.year}}</div>\
+  {{/each}}';
+  return sqrl.render(template, inputJSON);
 }
 
 async function render(inputCSV) {

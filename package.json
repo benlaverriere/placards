@@ -19,6 +19,6 @@
   "homepage": "https://github.com/benlaverriere/placards#readme",
   "dependencies": {
     "csvtojson": "^2.0.10",
-    "node-json2html": "^1.4.0"
+    "squirrelly": "^8.0.8"
   }
 }
