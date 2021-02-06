@@ -1,0 +1,24 @@
+{
+  "name": "placards",
+  "version": "0.1.0",
+  "description": "words on cards about your stuff",
+  "main": "index.js",
+  "scripts": {
+    "generate": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benlaverriere/placards.git"
+  },
+  "author": "Ben LaVerriere",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benlaverriere/placards/issues"
+  },
+  "homepage": "https://github.com/benlaverriere/placards#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "node-json2html": "^1.4.0"
+  }
+}
