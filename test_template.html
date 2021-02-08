@@ -8,7 +8,7 @@ div { color: blue; }
   </head>
   <body>
     {{@each(it) => value, index}}
-    <div>{{value.title}} {{value.year}}</div>
+    <div>{{value.title | smartypants }} {{value.year | smartypants }}</div>
     {{/each}}
   </body>
 </html>

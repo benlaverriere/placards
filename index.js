@@ -1,6 +1,7 @@
 const csv = require('csvtojson');
 const sqrl = require('squirrelly');
 const fs = require('fs');
+const smartypants = require('smartypants');
 
 async function csv2json(inputCSV) {
   return await csv().fromFile(inputCSV);
@@ -8,6 +9,8 @@ async function csv2json(inputCSV) {
 
 function json2html(inputJSON, templatePath) {
   const template = fs.readFileSync(templatePath, { encoding: 'utf8', flag: 'r' });
+
+  sqrl.filters.define("smartypants", smartypants.smartypantsu);
   return sqrl.render(template, inputJSON);
 }
 
