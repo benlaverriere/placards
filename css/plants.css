@@ -26,5 +26,14 @@ div.nametag {
   height: 1in;
   text-align: center;
   border: 3pt double black;
+  outline: 1pt dotted #DDD;
+  outline-offset: 6pt;
   margin: 0.125in;
+}
+
+@media print {
+  div.nametag {
+    /* this doesn't work because of flex-wrap */
+    break-inside: avoid;
+  }
 }
