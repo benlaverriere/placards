@@ -1,61 +1,61 @@
-@import url('./normalize.css'); /* TODO move to live node dependency at some point? */
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i');
+@import url("./normalize.css"); /* TODO move to live node dependency at some point? */
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i");
 /* TODO reduce to weights/styles I use */
 
 section {
-    box-sizing: border-box;
-    border: 1px solid #DDD;
-    margin: 0.25in 0;
-    page-break-inside: avoid;
-    width: 5.5in;
-    min-height: 4in;
-    padding: 0.25in;
-    font-family: 'Alegreya Sans', sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  margin: 0.25in 0;
+  page-break-inside: avoid;
+  width: 5.5in;
+  min-height: 4in;
+  padding: 0.25in;
+  font-family: "Alegreya Sans", sans-serif;
 }
 
 body {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 h1 {
-    font-weight: 800;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.8em;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.8em;
 }
 
 h2 {
-    font-weight: 900;
-    font-size: 2em;
-    font-style: italic;
-    margin-bottom: 0;
+  font-weight: 900;
+  font-size: 2em;
+  font-style: italic;
+  margin-bottom: 0;
 }
 
 p {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 p.nationality {
-    font-weight: 500;
-    font-size: 1.6em;
-    margin-top: 0;
+  font-weight: 500;
+  font-size: 1.6em;
+  margin-top: 0;
 }
 
 p.media {
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.2em;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.2em;
 }
 
 p.creation {
-    margin-top: 0;
-    font-weight: 300;
+  margin-top: 0;
+  font-weight: 300;
 }
 
 div.note p {
-    font-weight: 400;
-    letter-spacing: +0.01em;
+  font-weight: 400;
+  letter-spacing: +0.01em;
 }
 
 div.note p:first-child {
@@ -69,15 +69,15 @@ p.noteType {
 }
 
 p.acquisition {
-    font-weight: 100;
-    font-size: 0.9em;
-    font-style: italic;
+  font-weight: 100;
+  font-size: 0.9em;
+  font-style: italic;
 }
 
 span.name {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 @page {
-    marks: crop;
+  marks: crop;
 }

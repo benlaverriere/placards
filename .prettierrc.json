@@ -1,1 +1,10 @@
-{}
+{
+  "overrides": [
+    {
+      "files": "*_template.html",
+      "options": {
+        "parser": "glimmer"
+      }
+    }
+  ]
+}

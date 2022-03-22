@@ -21,11 +21,7 @@
         "place": "Maine auction",
         "method": "purchased"
       },
-      "media": [
-        "paint",
-        "glue",
-        "hot dogs"
-      ],
+      "media": ["paint", "glue", "hot dogs"],
       "note": "markdown",
       "noteType": "Artist's Statement"
     },
