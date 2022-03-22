@@ -15,10 +15,14 @@ function json2html(inputJSON, templatePath) {
 }
 
 async function render(inputCSV, templatePath, outputPath) {
-  const json = await csv2json(inputCSV);
-  const html = json2html(json, templatePath);
-  fs.writeFileSync(outputPath, html);
-  console.log(`Written to ${outputPath}`);
+  try {
+    const json = await csv2json(inputCSV);
+    const html = json2html(json, templatePath);
+    fs.writeFileSync(outputPath, html);
+    console.log(`Written to ${outputPath}`);
+  } catch(e) {
+    console.error(e);
+  }
 }
 
 const argv = process.argv.slice(2);
